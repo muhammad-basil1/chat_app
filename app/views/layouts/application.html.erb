@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChatApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <% if notice %>
+      <p class="notice flex items-center justify-center text-gray-200 bg-gray-800 overflow-hidden py-3"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert flex items-center justify-center text-gray-200 bg-gray-800 overflow-hidden py-3"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
