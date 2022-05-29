@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  notifications:
+    new_message:
+      message: "You have a new message from %{sender_name}"

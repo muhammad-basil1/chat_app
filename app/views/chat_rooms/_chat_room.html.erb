@@ -1,0 +1,17 @@
+<%= link_to chat_room_messages_path(chat_room), class: dom_id(chat_room), method: :get, remote: true do %>
+  <div class="flex justify-between items-center p-3 hover:bg-gray-800 rounded-lg relative">
+    <div class="w-16 h-16 relative flex flex-shrink-0">
+      <img class="shadow-md rounded-full w-full h-full object-cover" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""
+        />
+    </div>
+    <div class="flex-auto min-w-0 ml-4 mr-2 hidden md:block group-hover:block">
+      <p><%= chat_room.other_participent.name %></p>
+      <div class="flex justify-between items-center text-sm text-gray-600">
+        <div class="min-w-0">
+          <p class="truncate"><%= chat_room.last_message&.body %></p>
+        </div>
+        <p class="ml-2"><%= time_ago_in_words(chat_room.last_message.updated_at) if chat_room.last_message&.updated_at.present? %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<div class="pr-4 pl-4 <%= dom_id(message) %>">
+  <div class="flex flex-row justify-content-<%= message.sender_id %> mb-3">
+    <div class="messages text-sm text-white grid grid-flow-row gap-2">
+      <div class="flex items-center flex-row-reverse-<%= message.sender_id %> group">
+        <p class="px-6 py-3 rounded-full bg-gray-800 bg-blue-700-<%= message.sender_id %> max-w-xs lg:max-w-md"><%= message.body %></p>
+      </div>
+    </div>
+  </div>
+</div>

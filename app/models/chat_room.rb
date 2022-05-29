@@ -1,5 +1,5 @@
 class ChatRoom < ApplicationRecord
-  has_many :messages
+  has_many :messages, dependent: :destroy
   belongs_to :first_participent, class_name: 'User'
   belongs_to :second_participent, class_name: 'User'
 
@@ -8,7 +8,7 @@ class ChatRoom < ApplicationRecord
   end
 
   def other_participent
-    if first_participent_id == User.current_user
+    if first_participent_id == User.current_user.id
       second_participent
     else
       first_participent

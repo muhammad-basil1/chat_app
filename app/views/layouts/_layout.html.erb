@@ -1,0 +1,14 @@
+<style type="text/css">
+  <% if current_user.present? %>
+    <%= ".justify-content-#{current_user.id}" %> {
+      justify-content:  flex-end;
+    }
+    <%= ".flex-row-reverse-#{current_user.id}" %> {
+      justify-content:  flex-end;
+    }
+    <%= ".bg-blue-700-#{current_user.id}" %> {
+      --tw-bg-opacity: 1 !important;
+      background-color: rgb(29 78 216/var(--tw-bg-opacity)) !important;
+    }
+  <% end %>
+</style>

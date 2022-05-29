@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "cssbundling-rails"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem 'redis', '=4.6'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -46,6 +46,8 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 gem 'devise', '=4.8.1'
+
+gem 'noticed', '=1.5.9'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -72,3 +74,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
